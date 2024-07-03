@@ -1,0 +1,119 @@
+/* CSS reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* --- */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#image-frame {
+  width: 500px;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#image-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  transition: ease 0.8s;
+}
+
+#image-container img {
+  width: 500px;
+  height: 400px;
+}
+
+#image-frame svg {
+  padding: 0;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  width: 3rem;
+  height: 3rem;
+  fill: rgba(0, 0, 0, 0.493);
+  stroke: #ffffff;
+  stroke-width: 0.2px;
+  cursor: pointer;
+}
+
+#moveLeftButton {
+  left: 1rem;
+}
+
+#moveRightButton {
+  right: 1rem;
+}
+
+#image-counters {
+  position: absolute;
+  bottom: 3%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.bubble {
+  width: 0.7rem;
+  height: 0.7rem;
+  background-color: rgba(128, 128, 128, 0.5);
+  cursor: pointer;
+}
+
+.activeBubble {
+  background-color: rgb(52, 98, 199);
+}
